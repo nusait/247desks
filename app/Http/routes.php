@@ -27,11 +27,14 @@ $transformer = function ($desk) {
 	];
 };
 
-$app->get('/', function() use ($app, $transformer) {
+$process = function() use ($app, $transformer) {
 	$applications = $app['db']->table('desks')->get();
 	$fractal = new Manager();
 	$fractal->setSerializer(new \League\Fractal\Serializer\ArraySerializer());
 	$resource = new Collection($applications, $transformer, 'desks');
 	$data = $fractal->createData($resource)->toArray();
 	return response()->json($data);
-});
+};
+
+$app->get('/', $process);
+$app->get('247desks', $process);
