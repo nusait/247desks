@@ -20,6 +20,8 @@ class CreateDesksTable extends Migration {
 			$table->string('name');
 			$table->string('phone');
 			$table->text('description')->nullable();
+			$table->string('area');
+			$table->text('coverage');
 			$table->string('image')->nullable();
 			$table->date('open_date')->nullable();
 			$table->date('close_date')->nullable();
