@@ -17,7 +17,7 @@ $transformer = function ($desk) {
 	$latLong = new \ServiceDesk\ValueObject\LatLong($desk->lat, $desk->long);
 	$phone = new \ServiceDesk\ValueObject\PhoneNumber($desk->phone);
 	return [
-		'id' => $desk->id,
+		'id' => (int) $desk->id,
 		'name' => $desk->name,
 		'description' => $desk->description,
 		'area' => $desk->area,
