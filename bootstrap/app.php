@@ -55,13 +55,14 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
+ $app->middleware([
 //     // 'Illuminate\Cookie\Middleware\EncryptCookies',
 //     // 'Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse',
 //     // 'Illuminate\Session\Middleware\StartSession',
 //     // 'Illuminate\View\Middleware\ShareErrorsFromSession',
 //     // 'Laravel\Lumen\Http\Middleware\VerifyCsrfToken',
-// ]);
+	'Dragonfire1119\Cors\Middleware\CorsMiddleware'
+ ]);
 
 // $app->routeMiddleware([
 
@@ -79,6 +80,7 @@ $app->singleton(
 */
 
 // $app->register('App\Providers\AppServiceProvider');
+$app->register('Dragonfire1119\Cors\Providers\CorsServiceProvider');
 
 /*
 |--------------------------------------------------------------------------
