@@ -23,6 +23,7 @@ $transformer = function ($desk) {
 		'area' => $desk->area,
 		'coverage' => $desk->coverage,
 		'image' => url($desk->image),
+		'email' => $desk->email,
 		'phone' => $phone->humanReadable(),
 		'lat' => $latLong->getLat(),
 		'long' => $latLong->getLong(),
